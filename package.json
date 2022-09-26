@@ -1,0 +1,42 @@
+{
+  "name": "@kingdom-raids-smart-contract/bsc-contracts",
+  "version": "1.0.0",
+  "description": "KingdomRaids on Binance Smart Chain",
+  "private": true,
+  "scripts": {
+    "compile": "truffle compile --all",
+    "migrate": "truffle migrate --network testnet",
+    "sm:generate-def": "ts-node scripts/typechain.ts",
+    "console:dev": "truffle console --network dev",
+    "deploy:dev": "truffle migrate --reset --network dev",
+    "deploy:testnet": "truffle migrate --network testnet",
+    "verify:testnet": "truffle run verify KDR --network testnet",
+    "deploy:bsc": "truffle migrate --reset --network bsc",
+    "migrate:bsc": "truffle migrate --network bsc",
+    "verify:bsc": "truffle run verify KRS --network bsc",
+    "test": "truffle test --network dev",
+    "test:metric:advisor": "truffle test test/metric/advisor.js --network dev",
+    "test:metric:ecosytem": "truffle test test/metric/ecosytem.js --network dev",
+    "lint": "echo 'Do nothing'",
+    "tsc": "echo 'Do nothing'"
+  },
+  "dependencies": {
+    "@openzeppelin/truffle-upgrades": "^1.14.0",
+    "@truffle/hdwallet-provider": "^2.0.4",
+    "chai": "^4.3.4",
+    "ganache-cli": "^6.12.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^9.2.2",
+    "truffle": "^5.5.4"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "@openzeppelin/contracts-upgradeable": "^4.5.2",
+    "@openzeppelin/test-environment": "^0.1.9",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "bn-chai": "^1.0.1",
+    "chai-bignumber": "^3.0.0",
+    "dotenv": "^10.0.0",
+    "truffle-plugin-verify": "^0.5.23"
+  }
+}
