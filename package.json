@@ -17,6 +17,8 @@
     "test": "truffle test --network dev",
     "test:metric:advisor": "truffle test test/metric/advisor.js --network dev",
     "test:metric:ecosytem": "truffle test test/metric/ecosytem.js --network dev",
+    "test:metric:liquidity": "truffle test test/metric/liquidity.js --network dev",
+    "test:metric:marketing": "truffle test test/metric/marketing.js --network dev",
     "lint": "echo 'Do nothing'",
     "tsc": "echo 'Do nothing'"
   },
