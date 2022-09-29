@@ -18,7 +18,7 @@ contract Marketing is MetricBase {
         isFirstRelease = true;
         nextTimeRelease = block.timestamp;
         releasePeriod = 30 days;
-        lastTimeRelease = block.timestamp + 1440 days; // over 48 months
+        lastTimeRelease = block.timestamp + 1470 days; // over 49 months
     }
 
     event ReleaseAllocation(
@@ -40,7 +40,7 @@ contract Marketing is MetricBase {
         if(isFirstRelease) {
             uint256 amount = 0;
             isFirstRelease = false;
-            amount = totalAllocation / 100;
+            amount = totalAllocation / 1000; // 0.1% TGE
             remainingAmount = remainingAmount - amount;
             nextTimeRelease = nextTimeRelease + releasePeriod; // 1 months cliff
             token.safeTransfer(msg.sender, amount);
